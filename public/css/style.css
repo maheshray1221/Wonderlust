@@ -1,0 +1,101 @@
+ * {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body{
+    font-family: "Plus Jakarta Sans", sans-serif !important;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+.container{
+    flex:1;
+}
+.container-fluid {
+    height: 3.5rem;
+    background: white; 
+} 
+
+.fa-slack {
+    color: red;
+    font-size: 2.2rem !important;
+}
+
+.nav-link {
+    color: black !important;
+    font-size: 2rem;
+}
+
+.f-info-social {
+    width: 100%;
+}
+.f-info-social i{
+    margin-right: 1.2rem;
+}
+.fa-brands {
+    font-size: 1.5rem;
+    margin-top: 3px;
+}
+
+.f-info {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    align-items: center;
+    text-align: center;
+    background: rgb(195, 198, 200);
+    height: 6rem;
+}
+
+.f-info-links {
+    margin-bottom: 3px;
+    width: 100%;
+}
+
+.f-info-links a {
+    color: black;
+    text-decoration: none;
+    padding: 5px;
+}
+.f-info-links a:hover{
+    text-decoration: underline;
+}
+
+.listing-card{
+    border: none !important;
+}
+.card img{
+    border-radius: 15px;
+    height:200px;
+    width: 310px;
+    margin: 5px;
+}
+.card-body{
+    padding: 0 !important;
+}
+.listing-links{
+    text-decoration: none;
+}
+.card-img-overlay{
+    opacity: 0;
+}
+.card-img-overlay:hover{
+   
+   opacity: 0.2 ; 
+    background:white;
+    
+}
+.btn{
+    background: red !important;
+    border: none !important;
+}
+/* Show page */
+.showbtn{
+    display: flex;
+    gap: 4rem;
+    margin-top: 2rem;
+    
+
+}
