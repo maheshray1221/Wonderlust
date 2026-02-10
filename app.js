@@ -82,6 +82,10 @@ app.use((req, res, next) => {
     next();
 });
 
+app.get("/", (req, res) => {
+    res.redirect("/listings")
+})
+
 // all listings
 app.use("/listings", listingsRouter);
 app.use("/listings/:id/reviews", reviewsRouter);
@@ -90,14 +94,15 @@ app.use("/", userRouter);
 
 
 // Custom ExpressError 
-app.use((req, res, next) => {
-    next(new ExpressError(404, "Page Not Found!"));
-});
+// app.use((req, res, next) => {
+//     next(new ExpressError(404, "Page Not Found!"));
+// });
 // error handler Middleware
 app.use((err, req, res, next) => {
     let { status = 404, message = "somthing wrong" } = err;
     res.status(status).render("error.ejs", { err });
 });
-app.listen(process.env.PORT || 8080, () => {
-    console.log("continue working in port 8080");
+let port = process.env.PORT || 8080
+app.listen(port, () => {
+    console.log(`continue working in port ${port}`);
 });
